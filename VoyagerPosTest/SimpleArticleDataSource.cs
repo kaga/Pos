@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using VoyagerPos;
-using System.Linq;
 
 namespace VoyagerPosTest
 {

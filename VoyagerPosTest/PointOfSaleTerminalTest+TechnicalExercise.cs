@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using NUnit.Framework;
 using VoyagerPos;
 
 namespace VoyagerPosTest
-{  
+{
     public class PointOfSaleTerminalTest_TechnicalExercise
     {
         PointOfSaleTerminal terminal;
