@@ -32,7 +32,7 @@ namespace VoyagerPos
 
         public IArticle BuildArticle()
         {
-            if (productCode == null)
+            if (productCode == null || string.IsNullOrEmpty(productCode))
             {
                 throw new InvalidOperationException("Product code is required");
             }

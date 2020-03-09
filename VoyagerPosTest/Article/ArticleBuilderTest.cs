@@ -7,6 +7,18 @@ namespace VoyagerPosTest.Article
     public class ArticleBuilderTest
     {
         [Test]
+        public void testEmptyProductCode()
+        {
+            Assert.Throws<InvalidOperationException>(() =>
+            {
+                var builder = new ArticleBuilder();
+                builder.SetUnitPrice(unitPrice: 1.25M);
+                builder.SetProductCode(productCode: "");
+                builder.BuildArticle();
+            });
+        }
+
+        [Test]
         public void testMissingProductCode()
         {            
             Assert.Throws<InvalidOperationException>(() =>
