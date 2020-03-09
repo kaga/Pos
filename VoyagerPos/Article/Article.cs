@@ -10,24 +10,24 @@ namespace VoyagerPos
             get;
         }
 
-        private List<IPricingCondition> pricingConditions;
+        private List<IPricingCondition> pricingConditionChains;
 
         public Article(string productCode, decimal unitPrice, decimal bulkPrice, int bulkQuantity)
             : this(productCode: productCode)
         {
-            this.pricingConditions.Add(new BulkPricingCondition(bulkPrice: bulkPrice, bulkQuantity: bulkQuantity));
-            this.pricingConditions.Add(new BaseUnitPricingCondition(unitPrice: unitPrice));
+            this.pricingConditionChains.Add(new BulkPricingCondition(bulkPrice: bulkPrice, bulkQuantity: bulkQuantity));
+            this.pricingConditionChains.Add(new BaseUnitPricingCondition(unitPrice: unitPrice));
         }
 
         public Article(string productCode, decimal unitPrice)
             : this(productCode: productCode)
         {
-            this.pricingConditions.Add(new BaseUnitPricingCondition(unitPrice: unitPrice));
+            this.pricingConditionChains.Add(new BaseUnitPricingCondition(unitPrice: unitPrice));
         }
 
         private Article(string productCode)
         {
-            this.pricingConditions = new List<IPricingCondition>();
+            this.pricingConditionChains = new List<IPricingCondition>();
             this.productCode = productCode;
         }
 
@@ -41,7 +41,7 @@ namespace VoyagerPos
             decimal remainingQuantity = quantity;
             decimal total = 0M;
 
-            foreach(var pricingCondition in this.pricingConditions)
+            foreach(var pricingCondition in pricingConditionChains)
             {
                 var result = pricingCondition.CalculatePrice(remainingQuantity);
 

@@ -18,5 +18,6 @@
   <ItemGroup>
     <Folder Include="PricingCondition\" />
     <Folder Include="Article\" />
+    <Folder Include="TestHelper\" />
   </ItemGroup>
 </Project>
