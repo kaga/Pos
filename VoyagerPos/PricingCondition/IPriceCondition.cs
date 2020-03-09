@@ -2,18 +2,18 @@
 {
     public interface IPricingCondition
     {
-        CalculatePriceResult CalculatePrice(int quantity);
+        CalculatePriceResult CalculatePrice(decimal quantity);
     }
 
     public struct CalculatePriceResult
     {
-        public CalculatePriceResult(decimal subtotal, int remainingQuantity)
+        public CalculatePriceResult(decimal subtotal, decimal remainingQuantity)
         {
             this.subtotal = subtotal;
             this.remainingQuantity = remainingQuantity;
         }
 
         public decimal subtotal;
-        public int remainingQuantity;
+        public decimal remainingQuantity;
     }
 }

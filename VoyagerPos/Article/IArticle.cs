@@ -7,6 +7,6 @@
             get;
         }
 
-        decimal CalculatePrice(int quantity);
+        decimal CalculatePrice(decimal quantity);
     }
 }

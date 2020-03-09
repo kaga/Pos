@@ -28,6 +28,18 @@ namespace VoyagerPosTest.Article
         }
 
         [Test]
+        public void testCalculatePriceForKgProduct()
+        {
+            var builder = new ArticleBuilder();
+            builder.SetProductCode(productCode: "Banana");
+            builder.SetUnitPrice(unitPrice: 2.99M);
+            article = builder.BuildArticle();
+
+            Assert.AreEqual(4.57, article.CalculatePrice(quantity: 1.53M), "Rounded to 2dp");
+            Assert.AreEqual(3.02, article.CalculatePrice(quantity: 1.01M), "Rounded to 2dp");
+        }
+
+        [Test]
         public void testCalculatePriceWithInvalidQuantity()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() =>

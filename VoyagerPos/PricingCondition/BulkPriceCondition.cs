@@ -3,25 +3,25 @@ namespace VoyagerPos
 {
     public class BulkPricingCondition : IPricingCondition
     {
-        private readonly int bulkQuantity;
+        private readonly decimal bulkQuantity;
         private readonly decimal bulkPrice;
 
-        public BulkPricingCondition(int bulkQuantity, decimal bulkPrice)
+        public BulkPricingCondition(decimal bulkQuantity, decimal bulkPrice)
         {
             this.bulkQuantity = bulkQuantity;
             this.bulkPrice = bulkPrice;
         }
 
-        public CalculatePriceResult CalculatePrice(int quantity)
+        public CalculatePriceResult CalculatePrice(decimal quantity)
         {
             if (quantity <= 0)
             {
                 throw new ArgumentOutOfRangeException("Purchase quantity should be greater than 0");
             }
 
-            int bulkPurchaseQuantity = quantity / this.bulkQuantity;
+            decimal bulkPurchaseQuantity = Math.Truncate(quantity / this.bulkQuantity);
             decimal bulkSubtotal = bulkPurchaseQuantity * this.bulkPrice;
-            int remainingQuantity = quantity % this.bulkQuantity;
+            decimal remainingQuantity = quantity % this.bulkQuantity;
 
             return new CalculatePriceResult(subtotal: bulkSubtotal, remainingQuantity: remainingQuantity);
         }

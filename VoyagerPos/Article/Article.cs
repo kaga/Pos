@@ -31,14 +31,14 @@ namespace VoyagerPos
             this.productCode = productCode;
         }
 
-        public decimal CalculatePrice(int quantity)
+        public decimal CalculatePrice(decimal quantity)
         {
             if (quantity <= 0)
             {
                 throw new ArgumentOutOfRangeException("Purchase quantity should be > 0");
             }
 
-            int remainingQuantity = quantity;
+            decimal remainingQuantity = quantity;
             decimal total = 0M;
 
             foreach(var pricingCondition in this.pricingConditions)
@@ -59,7 +59,7 @@ namespace VoyagerPos
                 throw new InvalidOperationException($"Remaining Quantity should be 0, found {remainingQuantity}");
             }
 
-            return total;
+            return Decimal.Round(total, 2, MidpointRounding.AwayFromZero);
         }
     }
 }

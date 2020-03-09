@@ -10,7 +10,7 @@ namespace VoyagerPos
             this.unitPrice = unitPrice;
         }
 
-        public CalculatePriceResult CalculatePrice(int quantity)
+        public CalculatePriceResult CalculatePrice(decimal quantity)
         {
             if (quantity <= 0)
             {
