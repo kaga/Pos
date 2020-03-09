@@ -15,7 +15,7 @@ namespace VoyagerPosTest.PricingCondition
         }
 
         [Test]
-        public void testPriceCalculation()
+        public void TestPriceCalculation()
         {
             var result = condition.CalculatePrice(1);
             Assert.AreEqual(1.25M, result.subtotal);
@@ -27,7 +27,7 @@ namespace VoyagerPosTest.PricingCondition
         }
 
         [Test]
-        public void testInvalidQuantity()
+        public void TestInvalidQuantity()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => condition.CalculatePrice(quantity: 0));
             Assert.Throws<ArgumentOutOfRangeException>(() => condition.CalculatePrice(quantity: -1));          

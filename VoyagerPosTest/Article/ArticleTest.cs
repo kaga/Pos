@@ -9,7 +9,7 @@ namespace VoyagerPosTest.Article
         IArticle article; 
 
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             var builder = new ArticleBuilder();
             builder.SetProductCode(productCode: "A");
@@ -19,7 +19,7 @@ namespace VoyagerPosTest.Article
         }
 
         [Test]
-        public void testCalculatePrice()
+        public void TestCalculatePrice()
         {
             Assert.AreEqual(1.25M, article.CalculatePrice(quantity: 1), "base unit purchase");
             Assert.AreEqual(3.0M, article.CalculatePrice(quantity: 3), "bulk purchase");
@@ -28,7 +28,7 @@ namespace VoyagerPosTest.Article
         }
 
         [Test]
-        public void testCalculatePriceForKgProduct()
+        public void TestCalculatePriceForKgProduct()
         {
             var builder = new ArticleBuilder();
             builder.SetProductCode(productCode: "Banana");
@@ -40,7 +40,7 @@ namespace VoyagerPosTest.Article
         }
 
         [Test]
-        public void testCalculatePriceWithInvalidQuantity()
+        public void TestCalculatePriceWithInvalidQuantity()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
