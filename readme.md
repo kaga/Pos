@@ -1,5 +1,7 @@
 ## Technical Exercise
 
+![.NET Core](https://github.com/kaga/VoyagerPos/workflows/.NET%20Core/badge.svg)
+
 ### Problem
 
 Consider a grocery market where items have prices per unit but also volume prices. For example, Apples may be $1.25 each, or 3 for $3.
