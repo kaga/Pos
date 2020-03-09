@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoyagerPos", "VoyagerPos\VoyagerPos.csproj", "{F967E0C4-B846-42F9-8169-4D06DB7C3C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoyagerPosTest", "VoyagerPosTest\VoyagerPosTest.csproj", "{CBE83AB9-BD0F-4AA3-856F-1B73F4922270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F967E0C4-B846-42F9-8169-4D06DB7C3C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F967E0C4-B846-42F9-8169-4D06DB7C3C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F967E0C4-B846-42F9-8169-4D06DB7C3C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F967E0C4-B846-42F9-8169-4D06DB7C3C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE83AB9-BD0F-4AA3-856F-1B73F4922270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE83AB9-BD0F-4AA3-856F-1B73F4922270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE83AB9-BD0F-4AA3-856F-1B73F4922270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE83AB9-BD0F-4AA3-856F-1B73F4922270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
